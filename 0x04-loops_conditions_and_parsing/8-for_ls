@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This script displays directory contents, one per line, showing only text after first dash
+for file in *; do
+    if [ -f "$file" ]; then
+        # Remove everything up to and including the first dash
+        echo "${file#*-}"
+    fi
+done
