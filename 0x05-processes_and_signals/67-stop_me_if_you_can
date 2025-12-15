@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Stop the 7-highlander process using SIGTERM (which it ignores)
 pid=$(pgrep -f "7-highlander")
 if [ -n "$pid" ]; then
     kill -SIGTERM "$pid"
